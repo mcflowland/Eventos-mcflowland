@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-withe: #fff;
+  --color-black: #1b1b26;
+  --color-laranje: #ffad0f;
+  --color-shandow: rgba(0, 0, 0, 0.49);
+  --color-gray: #5d5e60;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-black);
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 87px;
+  height: 87px;
+  flex-shrink: 0;
+  border-radius: 87px;
+  margin-right: 50px;
+}
+
+.title {
+  color: var(--color-withe);
+  text-align: center;
+  text-shadow: -1px 2px 1px var(--color-laranje);
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+section {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.main-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1259px;
+  height: 681px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 2%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.card {
+  position: relative;
+  width: 374px;
+  height: 236px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: var(--color-gray);
+  box-shadow: -2px 6px 6px 0px var(--color-shandow);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.time {
+  width: 100%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 50px;
+}
+
+p {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 1270px) {
+  section {
+    margin-top: 130px; /* Adiciona um espaço igual à altura do header */
+  }
+
+  .main-card {
+    width: calc(100% - 4%); /* Ajusta a largura */
+    max-width: none; /* Remove a largura máxima */
+    height: auto; /* Altura ajustável */
+    padding: 0; /* Remove o padding */
+  }
+
+  .card {
+    margin-bottom: 20px; /* Adiciona um espaço entre os cards */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-card {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    max-width: none; /* Remove a largura máxima */
+  }
+
+  .card {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    max-width: none; /* Remove a largura máxima */
+    box-sizing: border-box; /* Inclui o padding e a borda na largura */
+  }
+
+  .card h1, .card p {
+    max-width: 100%; /* O conteúdo ocupa 100% da largura disponível */
+  }
+}
