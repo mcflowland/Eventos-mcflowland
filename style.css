@@ -119,6 +119,10 @@ p {
   margin: 0;
 }
 
+h1 {
+  color: var(--color-withe);
+}
+
 @media screen and (max-width: 1270px) {
   section {
     margin-top: 130px; /* Adiciona um espaço igual à altura do header */
